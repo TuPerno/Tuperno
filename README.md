@@ -1,7 +1,7 @@
 # Tuperno
 
 ## Descripción del Proyecto
-Este repositorio contiene el desarrollo y documentación asociada a la creación de una landing page para laferretería Tuperno.
+Este repositorio contiene el desarrollo y documentación asociada a la creación de una landing page para la ferretería Tuperno.
 El proyecto busca establecer presencia digital, aumentando la visibilidad del negocio y el contacto con potenciales clientes.
 
 ## Flujo de Trabajo en Git
