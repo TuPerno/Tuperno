@@ -1,0 +1,54 @@
+---
+import '../styles/global.css'
+import SocialBar from '../components/SocialBar.astro'
+---
+
+<!doctype html>
+<html lang="es">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width" />
+		<link rel="icon" type="image/svg+xml" href="/images/favicon.svg" />
+		<meta name="generator" content={Astro.generator} />
+		
+		<!-- SEO Meta Tags -->
+	<title>TuPerno: Especialistas en Pernos y Fijaciones en San Pedro de la Paz</title>
+		<meta name="description" content="Ferretería TuPerno en San Pedro de la Paz, Bío Bío. Encuentra pernos, tornillos, herramientas y materiales de construcción. Envíos rápidos y atención personalizada. ¡Visítanos!" />
+		<meta name="keywords" content="ferretería, pernos, tornillos, herramientas, San Pedro de la Paz, Bío Bío, ferretería cerca de mí, materiales construcción" />
+		
+		<!-- Social Media -->
+		<meta property="og:type" content="website" />
+		<meta property="og:title" content="TuPerno - Ferretería en San Pedro de la Paz" />
+		<meta property="og:description" content="Tu ferretería de confianza en San Pedro de la Paz, Bío Bío. Pernos, tornillos, herramientas y más." />
+		<meta property="og:locale" content="es_CL" />
+		
+		<!-- Local  -->
+		<script type="application/ld+json">
+			{
+				"@context": "https://schema.org",
+				"@type": "HardwareStore",
+				"name": "TuPerno",
+				"description": "Ferretería en San Pedro de la Paz, Bío Bío",
+				"address": {
+					"@type": "PostalAddress",
+					"streetAddress": "Av. Pedro Aguirre Cerda, Pje. Noventa 1973",
+					"addressLocality": "San Pedro de la Paz",
+					"addressRegion": "Bío Bío",
+					"postalCode": "4130010",
+					"addressCountry": "CL"
+				},
+				"geo": {
+					"@type": "GeoCoordinates",
+					"latitude": "-36.82",
+					"longitude": "-73.09"
+				},
+				"priceRange": "$$",
+				"telephone": "+56951997763"
+			}
+		</script>
+	</head>
+	<body>
+		<SocialBar />
+		<slot />
+	</body>
+</html>
