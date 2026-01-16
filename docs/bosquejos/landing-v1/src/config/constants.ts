@@ -27,28 +27,24 @@ export const BUSINESS_HOURS = {
 
 // Redes sociales
 export const SOCIAL_MEDIA = {
-  facebook: 'https://web.facebook.com/Tuperno',
+  facebook: 'https://www.facebook.com/Tuperno',
   instagram: 'https://www.instagram.com/tuperno_90/',
   instagramHandle: '@tuperno_90',
   whatsappAvailable: false
 };
 
-// Colores del tema (Identidad Visual Corporativa)
 export const THEME_COLORS = {
-  // Colores Corporativos
-  black: '#121212',      // Negro
-  red: '#B71C1C',        // Rojo
-  yellow: '#FBC02D',     // Amarillo
+  black: '#121212',      
+  red: '#B71C1C',        
+  yellow: '#FBC02D',    
   
-  // Colores del Logotipo
-  blue: '#0000FE',       // Azul
-  gray: '#D8DFD8',       // Gris
+  blue: '#0000FE',       
+  gray: '#D8DFD8',      
   
-  // Aliases para uso en componentes
-  primary: '#B71C1C',    // Rojo
+  primary: '#B71C1C',    
   primaryHover: '#8B1515',
-  secondary: '#FBC02D',  // Amarillo
+  secondary: '#FBC02D',  
   secondaryHover: '#F9A825',
-  accent: '#0000FE',     // Azul
-  dark: '#121212'        // Negro
+  accent: '#0000FE',     
+  dark: '#121212'        
 };
