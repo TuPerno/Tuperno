@@ -214,16 +214,21 @@ import { SOCIAL_MEDIA } from '../config/constants';
 	let autoSlideInterval: number;
 
 	function showSlide(index: number) {
-		slides.forEach(slide => slide.classList.remove('active'));
-		indicators.forEach(indicator => indicator.classList.remove('active'));
+		// Detener cualquier animación en curso
+		slides.forEach(slide => {
+			slide.classList.remove('active');
+		});
+		indicators.forEach(indicator => {
+			indicator.classList.remove('active');
+		});
 
 		currentSlide = (index + totalSlides) % totalSlides;
-		slides[currentSlide].classList.add('active');
-		indicators[currentSlide].classList.add('active');
-
-		if (window.instgrm) {
-			window.instgrm.Embeds.process();
-		}
+		
+		// Pequeño delay para asegurar que la transición funcione correctamente
+		requestAnimationFrame(() => {
+			slides[currentSlide].classList.add('active');
+			indicators[currentSlide].classList.add('active');
+		});
 	}
 
 	function nextSlide() {
@@ -235,7 +240,7 @@ import { SOCIAL_MEDIA } from '../config/constants';
 	}
 
 	function startAutoSlide() {
-		autoSlideInterval = window.setInterval(nextSlide, 5000);
+		autoSlideInterval = window.setInterval(nextSlide, 8000);
 	}
 
 	function stopAutoSlide() {
@@ -269,13 +274,24 @@ import { SOCIAL_MEDIA } from '../config/constants';
 	carouselWrapper?.addEventListener('mouseenter', stopAutoSlide);
 	carouselWrapper?.addEventListener('mouseleave', startAutoSlide);
 
+	// Inicializar carrusel
 	showSlide(0);
-	startAutoSlide();
-
-	const checkInstagram = setInterval(() => {
-		if (window.instgrm) {
-			clearInterval(checkInstagram);
-			window.instgrm.Embeds.process();
-		}
-	}, 500);
+	
+	// Procesar Instagram embeds una sola vez después de cargar
+	if (window.instgrm) {
+		window.instgrm.Embeds.process();
+	} else {
+		window.addEventListener('load', () => {
+			setTimeout(() => {
+				if (window.instgrm) {
+					window.instgrm.Embeds.process();
+				}
+			}, 1000);
+		});
+	}
+	
+	// Iniciar auto-slide después de que todo esté cargado
+	setTimeout(() => {
+		startAutoSlide();
+	}, 1500);
 </script>
