@@ -1,6 +1,6 @@
-# TuPerno - Landing Page
+# Tuperno - Landing Page
 
-Prototipo Landing page para TuPerno, ferretería especializada en pernos y fijaciones en San Pedro de la Paz, Región del Biobío, Chile.
+Prototipo Landing page para Tuperno, ferretería especializada en pernos y fijaciones en San Pedro de la Paz, Región del Biobío, Chile.
 
 ## Inicio Rápido
 
