@@ -23,7 +23,7 @@ Abrir navegador en: http://localhost:4321
 landing-v1/
 ├── public/
 │   └── images/
-│       ├── logo.png
+│       ├── logo principal.jpeg
 │       ├── pernos.png
 │       └── TuPernoLocal.png
 ├── src/
@@ -153,8 +153,8 @@ Footer con información de contacto, mapa de Google Maps y botones de acción.
 ## Modificaciones Comunes
 
 ### Cambiar Logo
-Reemplazar: `public/images/logo.png`
-Tamaño recomendado: 200x50px, PNG con fondo transparente
+Reemplazar: `public/images/logo principal.jpeg`
+Tamaño recomendado: 200x50px, JPEG
 
 ### Cambiar Publicaciones del Carousel
 Archivo: `src/components/ProductCarousel.astro`
