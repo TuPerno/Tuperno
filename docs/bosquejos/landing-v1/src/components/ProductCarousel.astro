@@ -224,7 +224,6 @@ import { SOCIAL_MEDIA } from '../config/constants';
 
 		currentSlide = (index + totalSlides) % totalSlides;
 		
-		// Pequeño delay para asegurar que la transición funcione correctamente
 		requestAnimationFrame(() => {
 			slides[currentSlide].classList.add('active');
 			indicators[currentSlide].classList.add('active');
